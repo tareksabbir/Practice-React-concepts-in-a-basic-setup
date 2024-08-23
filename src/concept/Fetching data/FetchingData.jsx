@@ -21,8 +21,9 @@ const FetchingData = () => {
       </div>
 
       {comments.map((item, index) => (
-        <div key={index} className="text-center ">
+        <div key={index} className="flex justify-center gap-5 ">
           <h1> Email : {item.email}</h1>
+          <h1> comment : {item.name}</h1>
         </div>
       ))}
 

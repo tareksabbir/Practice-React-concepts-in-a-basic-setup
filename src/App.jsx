@@ -1,4 +1,5 @@
 import Counting from "./concept/Counting/Counting";
+import Fetching2 from "./concept/Fetching data/Fetching2";
 import FetchingData from "./concept/Fetching data/FetchingData";
 import Props from "./concept/props/Props";
 import ArrayMapRendering from "./concept/rendering/ArrayMapRendering";
@@ -30,6 +31,7 @@ const App = () => {
 
       <ObjectInsideArrayMapping></ObjectInsideArrayMapping>
       <FetchingData></FetchingData>
+      <Fetching2></Fetching2>
       
     </>
   );
