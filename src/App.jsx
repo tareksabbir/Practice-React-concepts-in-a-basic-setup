@@ -1,4 +1,5 @@
 import Counting from "./concept/Counting/Counting";
+import FetchingData from "./concept/Fetching data/FetchingData";
 import Props from "./concept/props/Props";
 import ArrayMapRendering from "./concept/rendering/ArrayMapRendering";
 import ConditionalRendering from "./concept/rendering/ConditionalRendering";
@@ -26,7 +27,9 @@ const App = () => {
       {
         arr.map(names=><ArrayMapRendering arr={names} key={1}></ArrayMapRendering>)
       }
+
       <ObjectInsideArrayMapping></ObjectInsideArrayMapping>
+      <FetchingData></FetchingData>
       
     </>
   );

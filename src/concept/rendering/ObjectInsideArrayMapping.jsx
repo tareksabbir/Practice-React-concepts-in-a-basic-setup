@@ -7,10 +7,19 @@ const ObjectInsideArrayMapping = () => {
   ];
   return (
     <>
-      {player.map((item) => (
-        <div key={1}>
-          <h1>{item.name}</h1>
-          <h1>{item.age}</h1>
+      <h1 className="text-center font-bold mt-5 mb-5">
+        Data rendering from an array which contain objects
+      </h1>
+      {player.map((item, index) => (
+        <div key={index} className="text-center flex justify-center gap-10">
+          <h1>
+            <span className="text-lg font-bold">Name :</span> {item.name}
+          </h1>
+          <h1>
+            {" "}
+            <span className="text-lg font-bold">Age :</span>
+            {item.age}
+          </h1>
         </div>
       ))}
     </>
