@@ -1,6 +1,7 @@
 import Counting from "./concept/Counting/Counting";
 import Fetching2 from "./concept/Fetching data/Fetching2";
 import FetchingData from "./concept/Fetching data/FetchingData";
+import Users from "./concept/Fetching data/Users";
 import Props from "./concept/props/Props";
 import ArrayMapRendering from "./concept/rendering/ArrayMapRendering";
 import ConditionalRendering from "./concept/rendering/ConditionalRendering";
@@ -28,10 +29,12 @@ const App = () => {
       {
         arr.map(names=><ArrayMapRendering arr={names} key={1}></ArrayMapRendering>)
       }
-
+      <h1 className=" bg-teal-600 font-bold text-center p-5 mt-10 text-white text-xl">Data Fetching from Json api</h1>
       <ObjectInsideArrayMapping></ObjectInsideArrayMapping>
       <FetchingData></FetchingData>
       <Fetching2></Fetching2>
+      <h1 className=" bg-teal-800 font-bold text-center p-5 mt-10 text-white text-xl"> Practice Data Fetching from Json api</h1>
+      <Users></Users>
       
     </>
   );
