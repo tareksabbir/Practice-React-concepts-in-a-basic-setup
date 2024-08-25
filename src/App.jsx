@@ -1,4 +1,5 @@
-import Phase1 from "./Phase1";
+import Phase1 from "./Phases/Phase1";
+
 
 
 const App = () => {

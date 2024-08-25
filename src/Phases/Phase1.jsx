@@ -1,11 +1,11 @@
-import Counting from "./concept/Counting/Counting";
-import Fetching2 from "./concept/Fetching data/Fetching2";
-import FetchingData from "./concept/Fetching data/FetchingData";
-import Users from "./concept/Fetching data/Users";
-import Props from "./concept/props/Props";
-import ArrayMapRendering from "./concept/rendering/ArrayMapRendering";
-import ConditionalRendering from "./concept/rendering/ConditionalRendering";
-import ObjectInsideArrayMapping from "./concept/rendering/ObjectInsideArrayMapping";
+import Counting from "../concept/Counting/Counting";
+import Fetching2 from "../concept/Fetching data/Fetching2";
+import FetchingData from "../concept/Fetching data/FetchingData";
+import Users from "../concept/Fetching data/Users";
+import Props from "../concept/props/Props";
+import ArrayMapRendering from "../concept/rendering/ArrayMapRendering";
+import ConditionalRendering from "../concept/rendering/ConditionalRendering";
+import ObjectInsideArrayMapping from "../concept/rendering/ObjectInsideArrayMapping";
 
 const obj = {
   names: "jone",
