@@ -3,7 +3,7 @@
 const UserData = ({ user }) => {
   const { name, email, address } = user;
   return (
-    <div className="p-4 max-w-sm">
+    <div className="p-4 max-w-sm ml-10">
       <div className="flex rounded-lg h-full dark:bg-gray-800 bg-teal-400 p-8 flex-col">
         <div className="flex items-center mb-3">
           <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-indigo-500 bg-indigo-500 text-white flex-shrink-0">

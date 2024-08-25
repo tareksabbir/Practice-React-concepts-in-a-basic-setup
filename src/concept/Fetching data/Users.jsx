@@ -11,10 +11,10 @@ const Users = () => {
     },[])
     return (
         <div>
-            <h1 className="text-center text-2xl font-bold">This is user data:{users.length} </h1>
-           <div className="grid  grid-cols-3 mt-10">
+         
+           <div className="grid  grid-cols-4  mt-10">
            {
-                users.map((user)=><UserData key={user.id} user={user} ></UserData>)
+                users.slice(0,8).map((user)=><UserData key={user.id} user={user} ></UserData>)
             }
            </div>
         </div>

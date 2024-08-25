@@ -6,11 +6,7 @@ const Counting = () => {
   const increment = () => {
     setCount(count + 1);
   };
-  const fetchData = async () => {
-    await fetch(`https://jsonplaceholder.typicode.com/posts`)
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  };
+  
   return (
     <>
       <div className="text-center">
@@ -33,12 +29,7 @@ const Counting = () => {
         >
           Reduce one
         </button>
-        <button
-          onClick={() => fetchData()}
-          className="px-5 py-3 bg-blue-500 rounded-md mr-5 text-white"
-        >
-          Data fetching
-        </button>
+        
       </div>
     </>
   );

@@ -14,9 +14,9 @@ const FetchingData = () => {
     <div className="text-center mt-5">
         <button
           onClick={() => fetches()}
-          className="px-5 py-3 bg-teal-800 rounded-md mr-5 text-white text-center  mb-5"
+          className="px-5 py-3 bg-purple-500 rounded-md mr-5 text-white text-center  mb-5"
         >
-          Data Fetching From json api
+          Click here for fetching
         </button>
       </div>
 
