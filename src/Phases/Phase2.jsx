@@ -1,3 +1,4 @@
+import PracticeContainer from "../concept/Fetching data/Advance/PracticeContainer";
 import UserContainer from "../concept/Fetching data/Advance/userContainer";
 
 const Phase2 = () => {
@@ -10,7 +11,9 @@ const Phase2 = () => {
         </ol>
       </div>
       <UserContainer></UserContainer>
+      <PracticeContainer></PracticeContainer>
         </>
+        
     );
 };
 
