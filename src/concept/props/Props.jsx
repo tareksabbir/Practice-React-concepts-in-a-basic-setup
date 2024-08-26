@@ -31,7 +31,6 @@ function Experiment({ data }) {
   return (
     <>
       <div className="text-center mt-5">
-        
         <h1>hi im a experiment</h1>
         <h2>my name is a {name}</h2>
         <h3>my age is {age}</h3>

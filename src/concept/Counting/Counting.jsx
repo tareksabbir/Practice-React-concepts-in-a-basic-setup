@@ -6,7 +6,7 @@ const Counting = () => {
   const increment = () => {
     setCount(count + 1);
   };
-  
+
   return (
     <>
       <div className="text-center">
@@ -29,7 +29,6 @@ const Counting = () => {
         >
           Reduce one
         </button>
-        
       </div>
     </>
   );

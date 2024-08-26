@@ -11,7 +11,7 @@ const FetchingData = () => {
 
   return (
     <>
-    <div className="text-center mt-5">
+      <div className="text-center mt-5">
         <button
           onClick={() => fetches()}
           className="px-5 py-3 bg-purple-500 rounded-md mr-5 text-white text-center  mb-5"
@@ -26,8 +26,6 @@ const FetchingData = () => {
           <h1> comment : {item.name}</h1>
         </div>
       ))}
-
-      
     </>
   );
 };

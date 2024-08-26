@@ -17,19 +17,16 @@ const arr = ["rohim", "korim", "sakib", "korima"];
 const Phase1 = () => {
   return (
     <>
-    <div className="text-5xl font-medium bg-black text-white text-center p-10 ">
-    <h1 className=" text-blue-300">
-        This is Phase 1 Basics
-      </h1>
-      <ol className="text-center font-bold text-lg  flex justify-center  gap-5 mt-5">
-        <li>component</li>
-        <li>props</li>
-        <li>conditional rendering</li>
-        <li>state management</li>
-        <li>api rendering</li>
-      </ol>
-    </div>
-      
+      <div className="text-5xl font-medium bg-black text-white text-center p-10 ">
+        <h1 className=" text-blue-300">This is Phase 1 Basics</h1>
+        <ol className="text-center font-bold text-lg  flex justify-center  gap-5 mt-5">
+          <li>Component</li>
+          <li>Props</li>
+          <li>Conditional rendering</li>
+          <li>State management</li>
+          <li>Api rendering</li>
+        </ol>
+      </div>
 
       <div className="grid grid-cols-3">
         <div>
@@ -38,39 +35,39 @@ const Phase1 = () => {
           </h1>
           <Props></Props>
         </div>
-       <div>
-       <h1 className="text-xl font-medium bg-blue-400 text-white text-center p-5 mb-10">
-          here is conditional rendering
-        </h1>
-        <ConditionalRendering obj={obj}></ConditionalRendering>
-       </div>
-
-       <div>
-       <h1 className="text-xl text-center bg-yellow-700 font-medium text-white p-5 mb-10">
-          here is counting by state management
-        </h1>
-        <Counting></Counting>
-       </div>
-      <div>
-      <h1 className=" bg-amber-400 font-bold text-center p-5  text-white text-xl">
-          This is array map data
-        </h1>
-        {arr.map((names) => (
-          <ArrayMapRendering arr={names} key={1}></ArrayMapRendering>
-        ))}
-      </div>
-       <div>
-       <h1 className=" bg-teal-600 font-bold text-center p-5  text-white text-xl">
-          Data Fetching from Json api
-        </h1>
-        <ObjectInsideArrayMapping></ObjectInsideArrayMapping>
-       </div>
         <div>
-        <h1 className=" bg-cyan-500 font-bold text-center p-5  text-white text-xl">
-          Data Fetching from Json api
-        </h1>
-        <FetchingData></FetchingData>
-        <Fetching2></Fetching2>
+          <h1 className="text-xl font-medium bg-blue-400 text-white text-center p-5 mb-10">
+            here is conditional rendering
+          </h1>
+          <ConditionalRendering obj={obj}></ConditionalRendering>
+        </div>
+
+        <div>
+          <h1 className="text-xl text-center bg-yellow-700 font-medium text-white p-5 mb-10">
+            here is counting by state management
+          </h1>
+          <Counting></Counting>
+        </div>
+        <div>
+          <h1 className=" bg-amber-400 font-bold text-center p-5  text-white text-xl">
+            This is array map data
+          </h1>
+          {arr.map((names) => (
+            <ArrayMapRendering arr={names} key={1}></ArrayMapRendering>
+          ))}
+        </div>
+        <div>
+          <h1 className=" bg-teal-600 font-bold text-center p-5  text-white text-xl">
+            Data Fetching from Json api
+          </h1>
+          <ObjectInsideArrayMapping></ObjectInsideArrayMapping>
+        </div>
+        <div>
+          <h1 className=" bg-cyan-500 font-bold text-center p-5  text-white text-xl">
+            Data Fetching from Json api
+          </h1>
+          <FetchingData></FetchingData>
+          <Fetching2></Fetching2>
         </div>
       </div>
       <h1 className=" bg-teal-800 font-bold text-center p-5 mt-10 text-white text-xl">

@@ -8,7 +8,7 @@ const ConditionalRendering = ({ obj }) => {
         {isDone ? "hey man : " : " do it man : "} {names}
       </h1>
       <h1>{ages}</h1>
-      <h1 >{salary}</h1>
+      <h1>{salary}</h1>
     </div>
   );
 };
