@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 //it contains only presentational part do not contain any fetching or rendering data 
 const UserComponent = ({user,isLoading,error}) => {
     if(isLoading) return <div>...loading</div>

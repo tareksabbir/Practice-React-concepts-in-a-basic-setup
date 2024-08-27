@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 const UserData = ({ user }) => {
   const { name, email, address } = user;
   return (
