@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const CountriesComponent = (props) => {
-  const { country, isLoading, error ,handleVisitedCountry } = props;
+  const { country, isLoading, error, handleVisitedCountry } = props;
   const { name, flags, capital, region } = country;
   const [isVisit, setIsVisit] = useState(false);
 
   const handleVisit = (country) => {
-    setIsVisit(true);
-    handleVisitedCountry (country)
+    setIsVisit(!isVisit);
+    handleVisitedCountry(country);
   };
 
   if (isLoading) return <div>...loading</div>;
@@ -32,7 +32,7 @@ const CountriesComponent = (props) => {
         }
         type="button"
       >
-        {isVisit ? "Visited" : "should Visit"}
+        {isVisit ?  "Visited": " should visit"}
       </button>
     </div>
   );

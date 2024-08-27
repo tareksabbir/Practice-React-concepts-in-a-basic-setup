@@ -9,31 +9,64 @@ const CountriesContainer = () => {
   const [error, setError] = useState(false);
   const [visitedCountry, setVisitedCountry] = useState([]);
 
+//   const getCountries = async () => {
+//     setIsLoading(true);
+//     try {
+//       const response = await fetch("https://restcountries.com/v3.1/all");
+//       const json = await response.json();
+//       if (!json) return;
+//       setCountries(json);
+//     } catch (error) {
+//       setError(true);
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
+const sortCountriesByName = (countries) => {
+    return countries.sort((a, b) => {
+      const nameA = a.name.common.toUpperCase(); // Convert to uppercase to ensure case-insensitive comparison
+      const nameB = b.name.common.toUpperCase();
+      if (nameA < nameB) return -1;
+      if (nameA > nameB) return 1;
+      return 0;
+    });
+  };
+  
+  // Example usage with your fetch function
   const getCountries = async () => {
     setIsLoading(true);
     try {
       const response = await fetch("https://restcountries.com/v3.1/all");
       const json = await response.json();
       if (!json) return;
-      setCountries(json);
+  
+      // Sort the countries by name
+      const sortedCountries = sortCountriesByName(json);
+      setCountries(sortedCountries);
     } catch (error) {
       setError(true);
     } finally {
       setIsLoading(false);
     }
   };
+  
 
   useEffect(() => {
     getCountries();
   }, []);
 
   const handleVisitedCountry = (country) => {
-    setVisitedCountry([...visitedCountry, country]);
+    const newArray = visitedCountry.filter((c) => c.name.common !== country.name.common)
+    setVisitedCountry([...newArray,country])
   };
 
-  const removeCountry =(country)=>{
-    setVisitedCountry(visitedCountry.filter(c=>c.name.common !==country.name.common))
-  }
+  const removeCountry = (country) => {
+    setVisitedCountry(
+      visitedCountry.filter((c) => c.name.common !== country.name.common)
+    );
+  };
+
+
 
   return (
     <div>
@@ -53,7 +86,7 @@ const CountriesContainer = () => {
         <h1> See All Countries : {countries.length}</h1>
       </div>
 
-      <div className="grid grid-cols-3 mx-20  gap-5  ">
+      <div className="grid grid-cols-4 mx-20  gap-5  ">
         {countries.map((country) => {
           return (
             <CountriesComponent
