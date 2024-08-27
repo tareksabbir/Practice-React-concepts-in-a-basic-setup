@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import CountriesComponent from "../Components/CountriesComponent";
@@ -22,6 +23,8 @@ const CountriesContainer = () => {
 //       setIsLoading(false);
 //     }
 //   };
+
+// array of object shorting
 const sortCountriesByName = (countries) => {
     return countries.sort((a, b) => {
       const nameA = a.name.common.toUpperCase(); // Convert to uppercase to ensure case-insensitive comparison
@@ -53,7 +56,7 @@ const sortCountriesByName = (countries) => {
 
   useEffect(() => {
     getCountries();
-  }, []);
+  },[]);
 
   const handleVisitedCountry = (country) => {
     const newArray = visitedCountry.filter((c) => c.name.common !== country.name.common)
