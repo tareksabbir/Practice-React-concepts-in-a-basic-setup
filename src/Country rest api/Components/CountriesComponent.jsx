@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 const CountriesComponent = (props) => {
-  const { country, isLoading, error } = props;
+  const { country, isLoading, error ,handleVisitedCountry } = props;
   const { name, flags, capital, region } = country;
   const [isVisit, setIsVisit] = useState(false);
-  const handleVisit = () => {
+
+  const handleVisit = (country) => {
     setIsVisit(true);
+    handleVisitedCountry (country)
   };
 
   if (isLoading) return <div>...loading</div>;
@@ -22,7 +24,7 @@ const CountriesComponent = (props) => {
       <h1>Capital : {capital}</h1>
       <h1>Region : {region}</h1>
       <button
-        onClick={handleVisit}
+        onClick={() => handleVisit(country)}
         className={
           isVisit
             ? "select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none mt-5"
