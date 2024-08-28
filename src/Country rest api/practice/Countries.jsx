@@ -28,7 +28,13 @@ const Countries = () => {
   }, []);
 
   const handelDetails = (country) => {
-    SetDetails([...details, country]);
+    const newArray = details.filter((c) => c !== country)
+    SetDetails([...newArray,country])
+  };
+  const handelRemoveCountry = (country) => {
+    SetDetails(
+        details.filter((c) => c !== country)
+      );
   };
 
   return (
@@ -40,10 +46,14 @@ const Countries = () => {
       <div className="text-center mt-5 font-bold">
         Visited Country Details : {details.length}
       </div>
-      <div  className="grid grid-cols-5 gap-4 mt-10 mx-20">
+      <div className="grid grid-cols-5 gap-4 mt-5 mx-20">
         {details.map((country) => {
           return (
-            <Visited key={country.name.common} country={country}></Visited>
+            <Visited
+              key={country.name.common}
+              country={country}
+              handelRemoveCountry={handelRemoveCountry}
+            ></Visited>
           );
         })}
       </div>
