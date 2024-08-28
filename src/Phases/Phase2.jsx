@@ -1,6 +1,8 @@
-import PracticeContainer from "../concept/Fetching data/Advance/PracticeContainer";
-import UserContainer from "../concept/Fetching data/Advance/userContainer";
-import CountriesContainer from "../Country rest api/Containers/CountriesContainer";
+// import PracticeContainer from "../concept/Fetching data/Advance/PracticeContainer";
+// import UserContainer from "../concept/Fetching data/Advance/userContainer";
+// import CountriesContainer from "../Country rest api/Containers/CountriesContainer";
+
+import Countries from "../Country rest api/practice/Countries";
 
 const Phase2 = () => {
   return (
@@ -11,9 +13,10 @@ const Phase2 = () => {
           <li>Container presentational pattern</li>
         </ol>
       </div>
-      <UserContainer></UserContainer>
+      {/* <UserContainer></UserContainer>
       <PracticeContainer></PracticeContainer>
-      <CountriesContainer></CountriesContainer>
+      <CountriesContainer></CountriesContainer> */}
+      <Countries></Countries>
     </>
   );
 };
