@@ -53,7 +53,14 @@ const BottlesDataLoad = () => {
 
   return (
     <>
-    
+     <h1 className="text-center text-xl font-bold mt-5">
+          Cart : {cart.length}
+        </h1>
+    <div className="grid grid-cols-4">
+      {
+          cart.map(c =><Cart key={c.id} cart={c}></Cart>)
+        }
+      </div>
         <h1 className="text-center text-2xl font-bold mt-5">
           Total Item : {bottles.length}
         </h1>
@@ -72,15 +79,9 @@ const BottlesDataLoad = () => {
           );
         })}
       </div>
-      <h1 className="text-center text-xl font-bold mt-5">
-          Cart : {cart.length}
-        </h1>
+     
     
-      <div className="grid grid-cols-4">
-      {
-          cart.map(c =><Cart key={c.id} cart={c}></Cart>)
-        }
-      </div>
+      
      
 
     </>
