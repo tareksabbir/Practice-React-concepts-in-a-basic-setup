@@ -1,7 +1,6 @@
 import BookMark from "./BookMark";
 
 const BookMarks = ({ LocalBookMarkData ,readTime}) => {
-  console.log(LocalBookMarkData);
 
   return (
     <>

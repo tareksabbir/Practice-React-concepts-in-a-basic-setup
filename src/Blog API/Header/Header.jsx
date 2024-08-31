@@ -42,8 +42,10 @@ const Header = () => {
     addBlogToLocalStore(blog.id);
   };
 
-  const handleMarkedAsRead = (time) => {
+  const handleMarkedAsRead = (time,id) => {
     setReadTime(time+readTime)
+    const filterData = LocalBookMarkData.filter(idx => idx.id !== id)
+    setLocalBookMarkData(filterData)
   };
 
   return (
