@@ -1,9 +1,20 @@
-const Blogs = () => {
-    return (
-        <div>
-            <h1>this is blog Component</h1>
-        </div>
-    );
+import Blog from "./Blog";
+
+const Blogs = ({ handleBookMark, blogs, handleMarkedAsRead }) => {
+  return (
+    <div>
+      <div className="pr-5">
+        {blogs.map((blog) => (
+          <Blog
+            key={blog.id}
+            blog={blog}
+            handleBookMark={handleBookMark}
+            handleMarkedAsRead={handleMarkedAsRead}
+          ></Blog>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Blogs;
