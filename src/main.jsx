@@ -11,6 +11,8 @@ import Countries from './Country rest api/practice/Countries.jsx';
 import Error from './Error/Error.jsx';
 import Details from './Blog API/Blogs/Details.jsx';
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +31,8 @@ const router = createBrowserRouter([
         path: "/countries",
         element: <Countries></Countries>,
       },
+      
+      
     ]
   },
  

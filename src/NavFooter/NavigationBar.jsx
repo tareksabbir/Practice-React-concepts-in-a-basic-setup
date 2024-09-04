@@ -22,7 +22,6 @@ function NavigationBar() {
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
             <NavLink className="mr-5 hover:text-gray-900">Link1</NavLink>
             <NavLink to="/countries" className="mr-5 hover:text-gray-900"> Countries</NavLink>
-            <NavLink className="mr-5 hover:text-gray-900"> Link 3</NavLink>
             <NavLink to="/blog" className="mr-5 hover:text-gray-900"> Blogs</NavLink>
         </nav>
         <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
