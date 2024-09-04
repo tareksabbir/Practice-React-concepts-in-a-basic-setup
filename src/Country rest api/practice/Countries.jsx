@@ -49,10 +49,10 @@ const Countries = () => {
 
   return (
     <>
-      <h1 className="text-center font-bold text-xl mt-5">
+      {/* <h1 className="text-center font-bold text-xl mt-5">
         This is country component
-      </h1>
-      <div className="flex rounded-md border-2 border-blue-500 overflow-hidden max-w-md mx-auto font-[sans-serif]">
+      </h1> */}
+      {/* <div className="flex rounded-md border-2 border-blue-500 overflow-hidden max-w-md mx-auto font-[sans-serif]">
       <input
         type="email"
         placeholder="Search Something..."
@@ -71,9 +71,10 @@ const Countries = () => {
           />
         </svg>
       </button>
-    </div>
+    </div> */}
 
-      <div className="text-center mt-5 font-bold">
+     <div className="container mx-auto">
+     <div className="text-center mt-5 font-bold">
         Visited Country Details : {details.length}
       </div>
       <div className="grid grid-cols-5 gap-4 mt-5 mx-20">
@@ -91,7 +92,7 @@ const Countries = () => {
       <h2 className="text-center mt-5 font-semibold">
         See All Country : {countries.length}
       </h2>
-      <div className="grid grid-cols-5 gap-4 mt-10 mx-20">
+      <div className="grid grid-cols-5 gap-4 mt-10 ">
         {countries.map((country) => (
           <Country
             key={country.name.common}
@@ -102,6 +103,7 @@ const Countries = () => {
           ></Country>
         ))}
       </div>
+     </div>
     </>
   );
 };

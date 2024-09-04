@@ -1,19 +1,13 @@
-// import Phase1 from "./Phases/Phase1";
-// import Phase2 from "./Phases/Phase2.JSX";
-// import Phase3 from "./Phases/Phase3";
-import Phase4 from "./Phases/Phase4";
-
-
-
-
+import { Outlet } from "react-router-dom";
+import NavigationBar from "./NavFooter/NavigationBar";
+import Footer from "./NavFooter/Footer";
 
 const App = () => {
   return (
     <div>
-      {/* <Phase1></Phase1> */}
-      {/* <Phase2></Phase2> */}
-      {/* <Phase3></Phase3> */}
-      <Phase4></Phase4>
+      <NavigationBar></NavigationBar>
+      <Outlet></Outlet>
+      <Footer></Footer>
     </div>
   );
 };

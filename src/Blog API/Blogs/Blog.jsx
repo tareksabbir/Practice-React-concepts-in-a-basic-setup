@@ -1,4 +1,5 @@
 import { FaRegBookmark } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Blog = ({ blog, handleBookMark, handleMarkedAsRead }) => {
   return (
@@ -20,7 +21,7 @@ const Blog = ({ blog, handleBookMark, handleMarkedAsRead }) => {
         </div>
       </div>
       <div>
-        <h1 className="text-3xl font-bold">{blog.title}</h1>
+        <h1 className="text-xl">{blog.title}</h1>
       </div>
       <div className="flex">
         {blog.hashtags.map((hash, index) => {
@@ -31,12 +32,17 @@ const Blog = ({ blog, handleBookMark, handleMarkedAsRead }) => {
           );
         })}
       </div>
-      <div>
+      <div className="flex justify-between pr-5">
         <button
           onClick={()=>handleMarkedAsRead(blog.reading_time,blog.id)}
           className="text-purple-600 underline font-semibold"
         >Mark as read</button>
+        <Link to={`/blog/${blog.id}`} blog={blog}><button
+        
+        className="text-purple-600 underline font-semibold"
+      >Read the blog</button></Link>
       </div>
+      
     </div>
   );
 };

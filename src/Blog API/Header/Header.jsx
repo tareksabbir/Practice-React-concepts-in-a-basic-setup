@@ -49,13 +49,13 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <div className="flex justify-between mt-10 items-center mb-5">
-        <h1 className="text-3xl font-bold">Knowledge Cafe</h1>
+    <div className="container mx-auto px-5">
+      {/* <div className="flex justify-between mt-10 items-center mb-5">
+        <h1 className="text-xl ">Knowledge Cafe</h1>
         <img src="../../../src/assets/blog images/profile.png" alt="" />
-      </div>
+      </div> */}
       <hr className="font-extrabold" />
-      <div className="flex mt-5">
+      <div className="flex mt-10">
         <div className="w-2/3">
           <Blogs
             handleBookMark={handleBookMark}
