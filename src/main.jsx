@@ -1,24 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import './index.css'
-import Header from './Blog API/Header/Header.jsx';
-import Countries from './Country rest api/practice/Countries.jsx';
-import Error from './Error/Error.jsx';
-import Details from './Blog API/Blogs/Details.jsx';
-
-
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import Header from "./Blog API/Header/Header.jsx";
+import Countries from "./Country rest api/practice/Countries.jsx";
+import Error from "./Error/Error.jsx";
+import Details from "./Blog API/Blogs/Details.jsx";
+import RandomUsers from "./Random Users api/RandomUsers.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    errorElement:<Error></Error>,
-    children:[
+    errorElement: <Error></Error>,
+    children: [
       {
         path: "/blog",
         element: <Header></Header>,
@@ -31,16 +27,17 @@ const router = createBrowserRouter([
         path: "/countries",
         element: <Countries></Countries>,
       },
-      
-      
-    ]
+      {
+        path: "/users",
+        loader: () => fetch("https://jsonplaceholder.typicode.com/users"),
+        element: <RandomUsers></RandomUsers>,
+      },
+    ],
   },
- 
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-  <RouterProvider router={router} />
-  </StrictMode>,
-)
- 
+    <RouterProvider router={router} />
+  </StrictMode>
+);
