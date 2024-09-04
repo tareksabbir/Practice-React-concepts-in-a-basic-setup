@@ -21,7 +21,7 @@ function NavigationBar() {
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <NavLink to="/users" className="mr-5 hover:text-gray-900">
-            Random Users
+            Users
           </NavLink>
           <NavLink to="/countries" className="mr-5 hover:text-gray-900">
             {" "}
