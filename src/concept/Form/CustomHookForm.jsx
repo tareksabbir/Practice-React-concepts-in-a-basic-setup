@@ -1,20 +1,23 @@
-const BasicForm = () => {
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    console.log(name, email);
-  };
-  return (
-    <>
-      <div>
-      <h1 className="text-lg font-medium text-center">
+import useHookForm from "../../Hooks/useHookForm";
 
-        This is simple form practice
+const CustomHookForm = () => {
+    const nameState = useHookForm("")
+    const emailState = useHookForm("")
+   // const passState = useHookForm(null)
+    const handleFormSubmit =(e)=>{
+        e.preventDefault()
+        console.log(nameState.value)
+        console.log(emailState.value)
+    }
+  return (
+    <div>
+      <h1 className="text-lg font-medium text-center">
+        This is CUSTOM HOOK form practice
       </h1>
       <div className="flex items-center justify-center mb-10 my-5">
         <form onSubmit={handleFormSubmit}>
           <input
+          {...nameState}
             type="text"
             placeholder="Enter Your Name"
             className="border rounded-lg p-2 w-[250px]"
@@ -22,6 +25,7 @@ const BasicForm = () => {
           />
           <br />
           <input
+          {...emailState}
             type="email"
             placeholder="Enter Your Email"
             className="border rounded-lg p-2 mt-3 w-[250px]"
@@ -36,9 +40,8 @@ const BasicForm = () => {
           />
         </form>
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 
-export default BasicForm;
+export default CustomHookForm;

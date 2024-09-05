@@ -10,6 +10,7 @@ const StateBasedForm = () => {
   };
   return (
     <>
+      <div>
       <h1 className="text-lg font-medium text-center">
         This is state Based form practice
       </h1>
@@ -46,6 +47,7 @@ const StateBasedForm = () => {
             className="select-none rounded-lg border border-w-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none mt-3"
           />
         </form>
+      </div>
       </div>
     </>
   );
