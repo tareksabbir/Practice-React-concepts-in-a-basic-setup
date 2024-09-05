@@ -19,16 +19,23 @@ function NavigationBar() {
           </svg>
           <span className="ml-3 text-xl">Practice React</span>
         </a>
-        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <NavLink to="/users" className="mr-5 hover:text-gray-900">
+        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center ">
+          <NavLink
+            to="/users"
+            className="mr-5 hover:text-gray-900 active:underline"
+          >
             Users
           </NavLink>
-          <NavLink to="/countries" className="mr-5 hover:text-gray-900">
-            {" "}
+          <NavLink
+            to="/countries"
+            className="mr-5 hover:text-gray-900 active:underline"
+          >
             Countries
           </NavLink>
-          <NavLink to="/blog" className="mr-5 hover:text-gray-900">
-            {" "}
+          <NavLink
+            to="/blog"
+            className="mr-5 hover:text-gray-900 active:underline"
+          >
             Blogs
           </NavLink>
         </nav>
