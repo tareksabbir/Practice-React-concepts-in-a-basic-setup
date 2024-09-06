@@ -5,6 +5,7 @@ import StateBasedForm from "../concept/Form/StateBasedForm";
 import RefForm from "../concept/Form/RefForm";
 import CustomHookForm from "../concept/Form/CustomHookForm";
 import PracticeHookForm from "../concept/Form/PracticeHookForm";
+import ReuseableForm from "../concept/Form/ReuseableForm";
 
 const RandomUsers = () => {
   const users = useLoaderData();
@@ -23,6 +24,8 @@ const RandomUsers = () => {
         <RefForm></RefForm>
         <CustomHookForm></CustomHookForm>
         <PracticeHookForm></PracticeHookForm>
+        <ReuseableForm formTitle={"This is Sign Up"}></ReuseableForm>
+        <ReuseableForm formTitle={"This is Register"}></ReuseableForm>
       </div>
     </div>
   );

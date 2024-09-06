@@ -1,16 +1,22 @@
-const ReuseableForm = () => {
+import usePracticeHook from "../../Hooks/usePracticeHook";
+
+const ReuseableForm = ({ formTitle }) => {
+  const nameInput = usePracticeHook("");
+  const emailInput = usePracticeHook("");
+  const passInput = usePracticeHook("");
   const handleForm = (e) => {
     e.preventDefault();
+
+    console.log(nameInput.value, emailInput.value, passInput.value);
   };
   return (
     <>
       <div>
-        <h1 className="text-lg font-medium text-center">
-          This is CUSTOM HOOK form practice
-        </h1>
+        <h1 className="text-lg font-medium text-center">{formTitle}</h1>
         <div className="flex items-center justify-center mb-10 my-5">
           <form onSubmit={handleForm}>
             <input
+              {...nameInput}
               type="text"
               placeholder="Enter Your Name"
               className="border rounded-lg p-2 w-[250px]"
@@ -18,6 +24,7 @@ const ReuseableForm = () => {
             />
             <br />
             <input
+              {...emailInput}
               type="email"
               placeholder="Enter Your Email"
               className="border rounded-lg p-2 mt-3 w-[250px]"
@@ -25,6 +32,7 @@ const ReuseableForm = () => {
             />
             <br />
             <input
+              {...passInput}
               type="password"
               placeholder="Enter Your password"
               className="border rounded-lg p-2 mt-3 w-[250px]"
