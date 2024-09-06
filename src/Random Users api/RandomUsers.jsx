@@ -4,6 +4,7 @@ import BasicForm from "../concept/Form/BasicForm";
 import StateBasedForm from "../concept/Form/StateBasedForm";
 import RefForm from "../concept/Form/RefForm";
 import CustomHookForm from "../concept/Form/CustomHookForm";
+import PracticeHookForm from "../concept/Form/PracticeHookForm";
 
 const RandomUsers = () => {
   const users = useLoaderData();
@@ -21,6 +22,7 @@ const RandomUsers = () => {
         <StateBasedForm></StateBasedForm>
         <RefForm></RefForm>
         <CustomHookForm></CustomHookForm>
+        <PracticeHookForm></PracticeHookForm>
       </div>
     </div>
   );
