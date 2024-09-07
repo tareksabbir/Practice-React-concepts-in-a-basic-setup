@@ -1,5 +1,6 @@
 import Aunty from "../Aunty/Aunty";
 import Dad from "../Dad/Dad";
+import NameProvider from "../Hook/NameProvider";
 import Uncle from "../Uncle/Uncle";
 
 const Grandfather = () => {
@@ -8,9 +9,11 @@ const Grandfather = () => {
       <div>
         <h1 className="text-center mb-5 font-bold text-2xl">Grandfather</h1>
         <div className="flex  gap-5 ">
-          <Dad></Dad>
-          <Aunty></Aunty>
-          <Uncle></Uncle>
+          <NameProvider>
+            <Dad></Dad>
+            <Aunty></Aunty>
+            <Uncle></Uncle>
+          </NameProvider>
         </div>
       </div>
     </div>
