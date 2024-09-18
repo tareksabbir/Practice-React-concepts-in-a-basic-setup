@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Header from "./Blog API/Header/Header.jsx";
+import BlogMain from "./Blog API/BlogMain/BlogMain.jsx";
 import Countries from "./Country rest api/practice/Countries.jsx";
 import Error from "./Error/Error.jsx";
 import Details from "./Blog API/Blogs/Details.jsx";
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/blog",
-        element: <Header></Header>,
+        element: <BlogMain></BlogMain>,
       },
       {
         path: "/blog/:id",
